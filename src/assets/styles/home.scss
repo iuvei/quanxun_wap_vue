@@ -1,0 +1,461 @@
+@import './mixin';
+
+.news-header {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #383838;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  top: 0;
+  @at-root {
+    .news-header__left {
+      display: flex;
+      height: inherit;
+      align-items: center;
+      h1 {
+        color: #fff;
+        font-size: 36px;
+        margin-right: 10px;
+      }
+      i {
+        @include bgImgStyle(47px, 40px, './assets/images/notice_logo.png');
+        background-size: cover;
+        &.back-icon {
+          @include bgImgStyle(36px, 36px, './assets/images/allow.png');
+          background-size: cover;
+        }
+      }
+    }
+
+    .logo {
+      width: 400px;
+      margin-left: 180px;
+    }
+
+    .news-header__middle {
+      display: flex;
+      margin: 0 10px;
+      position: relative;
+      align-items: center;
+      height: inherit;
+      flex: 1;
+      justify-content: center;
+      h3 {
+        text-align: center;
+        color: #fff;
+      }
+      img {
+        position: absolute;
+        width: 46px;
+        height: 46px;
+        right: 10px;
+        top: 22px;
+      }
+      input {
+        background-color: transparent;
+        height: 60px;
+        line-height: 60px;
+        color: #fff;
+        border: none;
+        border-bottom: 1px solid #f9c457;
+        border-radius: 0;
+        width: 100%;
+        font-size: 28px;
+        padding: 10px 0;
+        padding-left: 50px;
+      }
+    }
+  }
+}
+
+.news-wrapper {
+  padding-top: 90px;
+}
+
+.home-notice {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  img {
+    display: inline-flex;
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  p {
+    font-size: 28px;
+    color: #666;
+    margin: 0 20px;
+  }
+}
+
+/**副标题*/
+.home-sub-menu {
+  display: flex;
+  height: 180px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 25px;
+  li {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 82px;
+      height: 82px;
+      margin-bottom: 15px;
+    }
+    span {
+      font-size: 24px;
+    }
+  }
+}
+
+/*顶级安全平台*/
+.home-save-content {
+  margin-top: 10px;
+  background-color: #fff;
+  @at-root {
+    .home-item__title {
+      display: flex;
+      padding: 0 20px;
+      height: 90px;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      border-bottom: 1px solid #cccccc;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #ccc;
+      }
+      @at-root {
+        .home-item__title-left {
+          display: flex;
+          i {
+            @include bgImgStyle(40px, 40px, './assets/images/win_logo.png');
+            background-size: cover;
+          }
+          h3 {
+            font-size: 30px;
+            margin-left: 10px;
+          }
+        }
+
+        .home-item__title-right {
+          display: flex;
+          align-items: center;
+          a {
+            color: #999;
+          }
+          i {
+            @include bgImgStyle(18px, 22px, './assets/images/more.png');
+            background-size: cover;
+            margin-left: 10px;
+            // display: inline-flex;
+            // width: 40px;
+            // height: 40px;
+            // background: url('./assets/images/win_logo.png') no-repeat;
+          }
+        }
+      }
+    }
+
+    .save-menu-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 4%;
+      .assure_pic {
+
+      }
+      li {
+        flex: 1 0 50%;
+        display: flex;
+        height: 130px;
+        justify-content: flex-start;
+        align-items: center;
+        @at-root {
+          .save-menu__media {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+          }
+
+          .save-menu__body {
+            margin-left: 20px;
+            .save-menu__body-title {
+              font-size: 30px;
+              position: relative;
+              color: #414141;
+            }
+            .save-menu__body-note {
+              font-size: 26px;
+              color: #999999;
+            }
+          }
+        }
+      }
+    }
+
+
+
+  }
+}
+
+//担保页面6个图css
+.save-menu-list-second{
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    flex: 1 0 50%;
+    display: flex;
+    height: 130px;
+    justify-content: flex-start;
+    @at-root {
+
+      .save-menu__media_second {
+        width: 140px;
+        height: 104px;
+      }
+
+      .save-menu__body_second {
+        margin-left: 10px;
+        .save-menu__body-title_second{
+          font-size: 20px;
+          position: relative;
+          color: #414141;
+        }
+        .save-menu__body-note_second {
+          font-size: 20px;
+          color: #999999;
+        }
+      }
+    }
+  }
+}
+
+
+
+// 今日头条
+.home-toutiao-content {
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #fff;
+  position: relative;
+  .home-toutiao_title {
+    i {
+      float: left;
+      width: 36px;
+      height: 36px;
+      background: url('./assets/images/toutiao_logo.png') no-repeat;
+      background-size: cover;
+      margin-right: 10px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+  }
+  .home-item__title-right {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+  }
+}
+
+/**娱乐城*/
+.home-play-content {
+  margin-top: 10px;
+  background-color: #fff;
+  .home-item__title-left {
+    align-items: center;
+    i {
+      background: url('./assets/images/play.png') no-repeat;
+      background-size: cover;
+    }
+    span {
+      font-size: 20px;
+      color: #999;
+      margin-left: 10px;
+    }
+  }
+  @at-root {
+    .play-swiper {
+      padding: 20px 0;
+      .play-swiper__list {
+        padding-left: 20px;
+        height: 180px;
+      }
+    }
+  }
+}
+
+/**banner**/
+.home-banner {
+  padding: 11px;
+  .home-banner__content {
+    height: 176px;
+    border-radius: 5px;
+    background-color: #ccc;
+  }
+}
+
+/**热门赛事**/
+.home-sports-content {
+  margin-top: 10px;
+  background-color: #fff;
+  .home-item__title-left {
+    i {
+      background: url('./assets/images/sports_logo.png') no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+/*优惠活动**/
+.home-discount-content {
+  margin-top: 10px;
+  background-color: #fff;
+  .home-item__title-left {
+    i {
+      background: url('./assets/images/dis_banner.png') no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+// 优秀测评
+.home-ceping-content {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  position: relative;
+  .home-ceping__title {
+    position: relative;
+    .home-ceping__title-left {
+      i {
+        float: left;
+        width: 36px;
+        height: 36px;
+        background: url('./assets/images/toutiao_logo.png') no-repeat;
+        background-size: cover;
+        margin-right: 10px;
+      }
+      h3 {
+        font-size: 28px;
+      }
+    }
+    .home-item__title-right {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+  }
+}
+
+/*资讯详情内页*/
+.news_title {
+  text-align: center;
+}
+
+.news_pic {
+  text-align: center;
+  margin-top: 20px;
+}
+.news_text{
+  width: 90%;
+  margin: 0 auto;
+  p{
+    line-height: 50px;
+    font-size: 22px;
+    text-indent: 40px;
+  }
+}
+
+/**底部菜单*/
+.news-container__footer {
+  height: 110px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  transform: translateZ(0);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  a {
+    flex: 1;
+    text-align: center;
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      font-size: 20px;
+    }
+    // i {
+    //   @include bgImgStyle(63px, 59px, './assets/images/notice_logo.png');
+    //   background-size: cover;
+    // }
+    &.footer-home {
+      i {
+        @include bgImgStyle(63px, 59px, './assets/images/home_menu.png');
+        background-size: cover;
+      }
+      &.home-active {
+        i {
+          background-image: url('./assets/images/home_menu_active.png')
+        }
+        color: #f9c457;
+      }
+    }
+    &.footer-assure {
+      i {
+        @include bgImgStyle(63px, 59px, './assets/images/assure_menu.png');
+        background-size: cover;
+      }
+      &.assure-active {
+        i {
+          background-image: url('./assets/images/assure_before.png')
+        }
+        color: #f9c457;
+      }
+    }
+    &.footer-discount {
+      i {
+        @include bgImgStyle(63px, 59px, './assets/images/dis_menu.png');
+        background-size: cover;
+      }
+      &.discount-active {
+        i {
+          background-image: url('./assets/images/dis_menu_active.png')
+        }
+        color: #f9c457;
+      }
+    }
+    &.footer-play {
+      i {
+        @include bgImgStyle(63px, 59px, './assets/images/play_menu.png');
+        background-size: cover;
+      }
+      &.play-active {
+        i {
+          background-image: url('./assets/images/play_menu_active.png')
+        }
+        color: #f9c457;
+      }
+    }
+  }
+}
+

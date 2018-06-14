@@ -1,0 +1,6 @@
+@mixin bgImgStyle ($w, $h, $url) {
+  display: inline-flex;
+  width: $w;
+  height: $h;
+  background: url($url) no-repeat;
+}

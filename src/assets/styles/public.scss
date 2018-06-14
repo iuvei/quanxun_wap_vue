@@ -1,0 +1,14 @@
+#app {
+  height: 100%;
+}
+.news-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  @at-root {
+    .home-container {
+      padding-bottom: 110px;
+      flex: 1;
+    }
+  }
+}
