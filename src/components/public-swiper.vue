@@ -41,7 +41,7 @@
 </script>
 <style scoped>
     .home-banner__swiper {
-        height: 520px;
+        height: 400px;
     }
     /* .swiper-pagination-bullet{
 
